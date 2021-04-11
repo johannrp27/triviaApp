@@ -1,11 +1,7 @@
 .form-control, .form-select{
-  border-radius: 20px !important;
+  border-radius: 10px !important;
 }
-.cardPadding{
-  padding-top: 50px;
-}
-.btn-primary{
-  background: #f9a827 !important;
-  border-color: #f9a827 !important;
-  color: white;
+.form-control:focus, .form-select:focus{
+  border-color: rgb(96 102 208 / 40%) !important;
+  box-shadow: 0 0 0 0.15rem rgb(96 102 208 / 40%) !important;
 }

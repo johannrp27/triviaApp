@@ -5,3 +5,14 @@
   background-repeat: no-repeat;
   height: 100%;
 }
+.btn-primary.common{
+  background: #f9a827;
+  border-color: #f9a827;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+.btn-primary.common:hover, .btn-primary.common:active, .btn-primary.common:focus {
+  background: #e49a24;
+  border-color: #e49a24;
+}

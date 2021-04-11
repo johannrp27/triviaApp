@@ -1,5 +1,21 @@
 {
   "commons": {
     "back": "Back"
-  }
+  },
+  "form":{
+    "name": "Name"
+  },
+  "difficult":{
+    "name": "Difficulty",
+    "easy": "Easy",
+    "medium": "Medium",
+    "hard": "Hard"
+  },
+  "type": {
+    "name": "Type",
+    "multiple": "Multiple Choice",
+    "tof": "True or false"
+  },
+  "numberOfQuestions": "Number of questions",
+  "start": "Start"
 }

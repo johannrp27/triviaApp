@@ -1,5 +1,21 @@
 {
   "commons": {
     "back": "Volver"
-  }
+  },
+  "form":{
+    "name": "Nombre"
+  },
+  "difficult":{
+    "name": "Dificultad",
+    "easy": "Facil",
+    "medium": "Medio",
+    "hard": "Difícil"
+  },
+  "type": {
+    "name": "Tipo",
+    "multiple": "Respuesta multiple",
+    "tof": "Verdadero o falso"
+  },
+  "numberOfQuestions": "Número de preguntas",
+  "start": "Empezar"
 }

@@ -1,6 +1,7 @@
 {
   "commons": {
-    "back": "Volver"
+    "back": "Volver",
+    "welcome": "Empecemos!"
   },
   "form":{
     "name": "Nombre"
@@ -17,5 +18,12 @@
     "tof": "Verdadero o falso"
   },
   "numberOfQuestions": "Número de preguntas",
-  "start": "Empezar"
+  "start": "Empezar",
+  "tryAgain": "Intentar de nuevo",
+  "result": {
+    "name": "Resultados",
+    "t1": "Tienes",
+    "t2": "respuestas correctas"
+  },
+  "next": "Siguiente"
 }

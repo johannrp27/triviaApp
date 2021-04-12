@@ -1,0 +1,17 @@
+.ovni, .earth{
+  width: 80px;
+}
+.animate__animated.animate__shakeY {
+  --animate-duration: 10s;
+}
+.earth{
+  animation: rotation 5s infinite linear;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}

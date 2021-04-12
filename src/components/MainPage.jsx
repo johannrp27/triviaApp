@@ -11,7 +11,7 @@ const MainPage = () => {
     <Router>
       <Switch>
         <Route exact path="/" component={Welcome}/>
-        <Route exact path="/question" component={Question}/>
+        <Route exact path="/question/:id" component={Question}/>
         <Route exact path="/results" component={Results}/>
         <Route exact path="/404" component={Page404}/>
         <Redirect to="/404"/>

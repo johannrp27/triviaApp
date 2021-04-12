@@ -1,21 +1,27 @@
 {
   "commons": {
     "back": "Volver",
-    "welcome": "Empecemos!"
+    "welcome": "Empecemos!",
+    "sorry":"Lo sentimos!",
+    "notFound":"No encontramos la página que buscas",
+    "next": "Siguiente",
+    "end": "Finalizar"
   },
   "form":{
     "name": "Nombre"
   },
   "difficult":{
-    "name": "Dificultad",
+    "name": "Dificultad (Cualquiera)",
+    "any": "Cualquiera",
     "easy": "Facil",
     "medium": "Medio",
     "hard": "Difícil"
   },
   "type": {
-    "name": "Tipo",
+    "name": "Tipo (Cualquiera)",
+    "any": "Cualquiera",
     "multiple": "Respuesta multiple",
-    "tof": "Verdadero o falso"
+    "boolean": "Verdadero o falso"
   },
   "numberOfQuestions": "Número de preguntas",
   "start": "Empezar",
@@ -24,6 +30,5 @@
     "name": "Resultados",
     "t1": "Tienes",
     "t2": "respuestas correctas"
-  },
-  "next": "Siguiente"
+  }
 }

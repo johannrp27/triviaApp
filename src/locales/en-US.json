@@ -1,21 +1,27 @@
 {
   "commons": {
     "back": "Back",
-    "welcome": "Let's get started!"
+    "welcome": "Let's get started!",
+    "sorry":"Sorry!",
+    "notFound":"We couldn't found the page you are looking for",
+    "next": "Next",
+    "end": "Finish"
   },
   "form":{
     "name": "Name"
   },
   "difficult":{
-    "name": "Difficulty",
+    "name": "Difficulty (Any)",
+    "any": "Any",
     "easy": "Easy",
     "medium": "Medium",
     "hard": "Hard"
   },
   "type": {
-    "name": "Type",
+    "name": "Type (Any)",
+    "any": "Any",
     "multiple": "Multiple Choice",
-    "tof": "True or false"
+    "boolean": "True or false"
   },
   "numberOfQuestions": "Number of questions",
   "start": "Start",
@@ -24,6 +30,5 @@
     "name": "Results",
     "t1": "You got",
     "t2": "correct answers"
-  },
-  "next": "Next"
+  }
 }

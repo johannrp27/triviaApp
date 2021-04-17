@@ -1,14 +1,19 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import TriviaContext from '../../context/context'
-import fetchQuestions from '../../helpers/getQuestions'
 import { useHistory } from 'react-router-dom'
 import Header from '../Header/Header'
 import './Welcome.scss'
+import { getQuestions } from '../../helpers/getQuestions'
 
 const Welcome = () => {
   const { t } = useTranslation()
-  const { user, setUser } = useContext(TriviaContext)
+  const { user, setUser, initialState } = useContext(TriviaContext)
+  const [style, setStyle] = useState('animate__bounceIn')
+
+  useEffect(() => {
+    setUser(initialState)
+  }, [])
 
   const handleChange = ({ target }) => {
     setUser({
@@ -17,13 +22,16 @@ const Welcome = () => {
     })
   }
   const history = useHistory()
+
   const startTrivia = async () => {
-    const questions = await fetchQuestions(user)
-    setUser({ ...user, questions })
+    setStyle('animate__fadeOutLeft')
+    const data = await getQuestions(user)
+    setUser({ ...user, questions: data })
     history.push(`/question/${1}`)
   }
+
   return (
-    <>
+    <div className={`animate__animated ${style}`}>
       <Header/>
       <div className="card data shadow-lg">
         <div className="px-4 pt-5">
@@ -44,7 +52,8 @@ const Welcome = () => {
               className="form-control"
               onChange={handleChange}
               placeholder={t('numberOfQuestions')}
-              aria-label={t('numberOfQuestions')}/>
+              aria-label={t('numberOfQuestions')}
+              min="0"/>
           </div>
           <div className="mb-3">
             <select className="form-select" name="difficulty" onChange={handleChange} aria-label="Select Difficulty">
@@ -62,13 +71,11 @@ const Welcome = () => {
             </select>
           </div>
           <div className="mb-3 text-end">
-            {/* <Link to={`/question/${1}`}> */}
             <button type="button" onClick={startTrivia} className="btn btn-primary common shadow">{t('start')}</button>
-            {/* </Link> */}
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

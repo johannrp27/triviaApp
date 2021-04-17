@@ -1,12 +1,23 @@
-.btn.answer{
-  border: 2px solid rgba(96, 102, 208, 0.7);
-  color: rgba(96, 102, 208, 0.8);
+.btn.radius{
   border-radius: 12px;
 }
+.btn.notAnswered{
+  border: 2px solid rgba(96, 102, 208, 0.8);
+  color: rgba(96, 102, 208, 0.8);
+}
 
-.btn.answer:hover{
+.btn.notAnswered:hover{
   background-color: #F9A826;
-  border-color: #F9A826;
+  border: 2px solid #F9A826;
   color: white;
-  border-right: 1px solid white;
+}
+.btn.correct{
+  background-color: #60BF88;
+  border: 2px solid #60BF88;
+  color:white
+}
+.btn.wrong{
+  background-color: #EA8282;
+  border: 2px solid #EA8282;
+  color:white
 }

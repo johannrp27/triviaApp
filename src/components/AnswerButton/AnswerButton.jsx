@@ -1,16 +1,46 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './AnswerButton.scss'
+import correctIcon from '../../static/icons/correctAnswer.svg'
+import wrongIcon from '../../static/icons/wrongAnswer.svg'
 
-const AnswerButton = ({ letter, answer }) => {
+const AnswerButton = ({ setUser, clicked, setClicked, correctAnswer, answer, id }) => {
+  const [style, setStyle] = useState('notAnswered')
+
+  useEffect(() => {
+    setStyle('notAnswered')
+  }, [answer])
+
+  const addPoint = () => {
+    setUser(user => ({ ...user, correct: user.correct + 1 }))
+  }
+
+  const handleClick = () => {
+    setClicked(true)
+    const isCorrect = answer === correctAnswer
+    if (isCorrect) {
+      console.log(answer, correctAnswer)
+      setStyle('correct')
+      addPoint()
+    } else {
+      setStyle('wrong')
+    }
+  }
   return (
-    <>
-      <div type="button" className="btn answer w-100 mb-3 py-2">
-        <div className="row">
-          <div className="col-2 lead m-0">{String.fromCharCode(letter)}</div>
-          <div className="col-10 lead m-0 text-start">{answer}</div>
+    <div type="button" onClick={handleClick} className={`btn radius w-100 mb-3 py-2 ${style} ${clicked ? 'disabled' : ''}`}>
+      <div className="row d-flex align-items-center">
+        <div className="col-2 lead m-0">{String.fromCharCode(65 + id)}</div>
+        <div className="col-8 lead m-0 text-start">{answer}</div>
+        <div className="col-2 m-0 text-center">
+          { clicked
+            ? answer === correctAnswer
+              ? <img src={correctIcon} alt="Correct Answer"/>
+              : <img src={wrongIcon} alt="Wrong Answer"/>
+            : ''
+          }
         </div>
+
       </div>
-    </>
+    </div>
   )
 }
 

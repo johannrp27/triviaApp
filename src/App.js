@@ -3,17 +3,17 @@ import MainPage from './components/MainPage'
 import TriviaContext from './context/context'
 import './scss/App.scss'
 function App () {
-  const [user, setUser] = useState({
+  const initialState = {
     name: '',
     amount: 5,
     difficulty: 'any',
     type: 'any',
     questions: [],
     correct: 0
-  })
-
+  }
+  const [user, setUser] = useState(initialState)
   return (
-    <TriviaContext.Provider value={{ user, setUser }}>
+    <TriviaContext.Provider value={{ user, setUser, initialState }}>
       <div className="App">
         <div className="container h-100 d-flex flex-column justify-content-center align-items-center">
           <div className="row w-100">

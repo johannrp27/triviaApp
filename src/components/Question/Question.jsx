@@ -1,50 +1,69 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import useCurrentQuestion from '../../hooks/useCurrentQuestion'
 import { useTranslation } from 'react-i18next'
-import { Link } from 'react-router-dom'
-// import { useHistory } from 'react-router-dom'
-import TriviaContext from '../../context/context'
-import shuffleAnswers from '../../helpers/shuffleAnswers'
+import { Link, useHistory } from 'react-router-dom'
 import AnswerButton from '../AnswerButton/AnswerButton'
 import Header from '../Header/Header'
+import Loader from '../Loader/Loader'
+import TriviaContext from '../../context/context'
 import './Question.scss'
 const Question = ({ match }) => {
   const { t } = useTranslation()
-  // const history = useHistory()
-  // if (!questions.length) history.push('/')
+  const [clicked, setClicked] = useState(false)
+  const [style, setStyle] = useState('animate__fadeInRight')
+  const history = useHistory()
 
-  const { user: { questions } } = useContext(TriviaContext)
-  const id = Number(match.params.id)
-  const question = questions[id - 1]
-  const answers = shuffleAnswers(question.incorrect_answers, question.correct_answer)
-  return (
-    <>
-      <Header/>
-      <div className="card data shadow-lg">
-        <div className="px-4 pt-5">
-          <div className="h4 mb-4 title">
-            {question.question}
-            {}
-          </div>
-          <div className="pb-4">
-            {answers.map((answer, id) => (
-              <AnswerButton letter={65 + id} key={id} answer={answer}/>
-            ))}
-          </div>
-          <div className="mb-3 text-end">
-            {
-              id === questions.length
-                ? <Link to={'/results'}>
-                  <button type="button" className="btn btn-primary common shadow">{t('commons.end')}</button>
-                </Link>
-                : <Link to={`/question/${Number(id) + 1}`}>
-                  <button type="button" className="btn btn-primary common shadow">{t('commons.next')}</button>
-                </Link>
-            }
+  const nextQuestion = () => {
+    setStyle('animate__fadeOutLeft')
+    setTimeout(() => {
+      history.push(`/question/${Number(match.params.id) + 1}`)
+    }, 300)
+  }
+  useEffect(() => {
+    setStyle('animate__fadeInRight')
+    setClicked(false)
+  }, [match.params.id])
+
+  const { question, loading, isLast } = useCurrentQuestion(match.params.id - 1)
+  const { setUser } = useContext(TriviaContext)
+  if (loading) return <Loader/>
+  else {
+    return (
+      <div className={`animate__animated ${style}`}>
+        <Header/>
+        <div className="card data shadow-lg">
+          <div className="px-4 pt-5">
+            <div className="h4 mb-4 title">
+              {question.question}
+            </div>
+            <div className="pb-3">
+              {question.answers?.map((answer, id) => (
+                <AnswerButton
+                  setUser={setUser}
+                  clicked={clicked}
+                  setClicked={setClicked}
+                  key={id}
+                  id={id}
+                  answer={answer}
+                  correctAnswer={question.correctAnswer}
+                />
+              ))}
+            </div>
+            <div className="mb-3 text-end">
+              { clicked
+                ? isLast
+                  ? <Link to={'/results'}>
+                    <button type="button" className="btn btn-primary common shadow">{t('commons.end')}</button>
+                  </Link>
+                  : <button type="button" onClick={nextQuestion} className="btn btn-primary common shadow">{t('commons.next')}</button>
+                : ''
+              }
+            </div>
           </div>
         </div>
       </div>
-    </>
-  )
+    )
+  }
 }
 
 export default Question

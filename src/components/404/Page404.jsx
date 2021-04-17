@@ -4,7 +4,6 @@ import Header from '../Header/Header'
 import ovni from '../../static/icons/ovni.svg'
 import earth from '../../static/icons/earth.svg'
 import './404.scss'
-import '../../../node_modules/animate.css/animate.min.css'
 const Page404 = () => {
   const { t } = useTranslation()
   return (

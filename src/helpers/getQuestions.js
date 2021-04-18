@@ -1,12 +1,11 @@
 import shuffleAnswers from './shuffleAnswers'
 import axios from 'axios'
 
-export const getQuestions = async (user) => {
-  let params = `amount=${user.amount}`
-  params += user.difficulty !== 'any' ? `&difficulty=${user.difficulty}` : ''
-  params += user.type !== 'any' ? `&type=${user.type}` : ''
-  const URL = `https://opentdb.com/api.php?${params}`
-  const { data } = await axios.get(URL)
+export const getQuestions = async (amount, difficulty, type) => {
+  const URL = 'https://opentdb.com/api.php'
+  const params = { amount, difficulty, type }
+  const { data } = await axios.get(URL, { params: params })
+  console.log(data)
 
   if (data.response_code === 0) {
     const questions = data.results.map((question, id) => {

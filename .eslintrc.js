@@ -20,7 +20,7 @@ module.exports = {
   ],
   rules: {
     'react-hooks/exhaustive-deps': 'off',
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    // 'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'max-len': [2, {
       code: 120, ignoreStrings: true, ignoreTemplateLiterals: true, ignoreUrls: true
@@ -37,4 +37,3 @@ module.exports = {
     'react/prop-types': 'off'
   }
 }
-  

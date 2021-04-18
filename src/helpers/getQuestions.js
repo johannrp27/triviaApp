@@ -5,17 +5,18 @@ export const getQuestions = async (amount, difficulty, type) => {
   const URL = 'https://opentdb.com/api.php'
   const params = { amount, difficulty, type }
   const { data } = await axios.get(URL, { params: params })
-  console.log(data)
 
   if (data.response_code === 0) {
     const questions = data.results.map((question, id) => {
-      question.incorrect_answers.forEach(ans => decodeHTML(ans))
-      const shuffledAnswers = shuffleAnswers(question.incorrect_answers, decodeHTML(question.correct_answer))
+      const questionDecoded = decodeHTML(question.question)
+      const incorrectAnswers = question.incorrect_answers.map(ans => decodeHTML(ans))
+      const correctAnswer = decodeHTML(question.correct_answer)
+      const shuffledAnswers = shuffleAnswers(incorrectAnswers, correctAnswer)
       return {
         id,
         category: question.category,
-        question: decodeHTML(question.question),
-        correctAnswer: question.correct_answer,
+        question: questionDecoded,
+        correctAnswer: correctAnswer,
         answers: shuffledAnswers
       }
     })

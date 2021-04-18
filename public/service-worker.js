@@ -1,5 +1,3 @@
-/* eslint-disable no-restricted-globals */
-
 const CACHE_NAME = 'TriviaCache'
 const CACHE_ASSETS = [
   'https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap',

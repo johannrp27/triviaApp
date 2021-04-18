@@ -1,17 +1,19 @@
 import React from 'react'
+import { withRouter } from 'react-router-dom'
 import logo from '../../static/icons/triviaPerson.svg'
 import './Header.scss'
-const Header = ({ activeImage = true }) => {
+
+const Header = ({ location }) => {
   return (
     <div className="header">
       <div >
         <div className="h1 text-white bold">TRIVIA GAME</div>
       </div>
-      <div className={activeImage ? 'position-relative' : 'd-none'}>
+      <div className={location.pathname.includes('results') ? 'd-none' : 'position-relative'}>
         <img className="img-fluid position-absolute trivia" id="img-header" src={logo} alt="Person Trivia" />
       </div>
     </div>
   )
 }
 
-export default Header
+export default withRouter(Header)

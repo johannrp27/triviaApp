@@ -1,18 +1,6 @@
 const CACHE_NAME = 'TriviaCache'
 const CACHE_ASSETS = [
   'https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap',
-  '.favicon.ico',
-  './',
-  './static/css/main.3488e832.chunk.css',
-  './static/js/runtime-main.1ce031a2.js',
-  './static/js/runtime-main.1ce031a2.js.map',
-  './static/css/2.36e6f016.chunk.css',
-  './static/js/2.d9eb85d0.chunk.js',
-  './static/js/2.d9eb85d0.chunk.js.map',
-  './index.html',
-  './static/css/2.36e6f016.chunk.css.map',
-  './static/css/main.3488e832.chunk.css.map',
-  './static/js/2.d9eb85d0.chunk.js.LICENSE.txt',
   './static/media/background.41dbc550.png',
   './static/media/correctAnswer.26f1d57d.svg',
   './static/media/earth.0ddf6d68.svg',

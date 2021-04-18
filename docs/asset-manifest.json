@@ -1,30 +1,30 @@
 {
   "files": {
-    "main.css": "/static/css/main.3488e832.chunk.css",
-    "main.js": "/static/js/main.a6a0e963.chunk.js",
-    "main.js.map": "/static/js/main.a6a0e963.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.1ce031a2.js",
-    "runtime-main.js.map": "/static/js/runtime-main.1ce031a2.js.map",
-    "static/css/2.36e6f016.chunk.css": "/static/css/2.36e6f016.chunk.css",
-    "static/js/2.d9eb85d0.chunk.js": "/static/js/2.d9eb85d0.chunk.js",
-    "static/js/2.d9eb85d0.chunk.js.map": "/static/js/2.d9eb85d0.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/2.36e6f016.chunk.css.map": "/static/css/2.36e6f016.chunk.css.map",
-    "static/css/main.3488e832.chunk.css.map": "/static/css/main.3488e832.chunk.css.map",
-    "static/js/2.d9eb85d0.chunk.js.LICENSE.txt": "/static/js/2.d9eb85d0.chunk.js.LICENSE.txt",
-    "static/media/App.scss": "/static/media/background.41dbc550.png",
-    "static/media/correctAnswer.26f1d57d.svg": "/static/media/correctAnswer.26f1d57d.svg",
-    "static/media/earth.0ddf6d68.svg": "/static/media/earth.0ddf6d68.svg",
-    "static/media/ovni.1aafc528.svg": "/static/media/ovni.1aafc528.svg",
-    "static/media/triviaPerson.182b6171.svg": "/static/media/triviaPerson.182b6171.svg",
-    "static/media/winner.d76bfdf8.svg": "/static/media/winner.d76bfdf8.svg",
-    "static/media/wrongAnswer.ae055bf0.svg": "/static/media/wrongAnswer.ae055bf0.svg"
+    "main.css": "/triviaApp/static/css/main.8da33de3.chunk.css",
+    "main.js": "/triviaApp/static/js/main.959591c8.chunk.js",
+    "main.js.map": "/triviaApp/static/js/main.959591c8.chunk.js.map",
+    "runtime-main.js": "/triviaApp/static/js/runtime-main.b264da37.js",
+    "runtime-main.js.map": "/triviaApp/static/js/runtime-main.b264da37.js.map",
+    "static/css/2.36e6f016.chunk.css": "/triviaApp/static/css/2.36e6f016.chunk.css",
+    "static/js/2.d9eb85d0.chunk.js": "/triviaApp/static/js/2.d9eb85d0.chunk.js",
+    "static/js/2.d9eb85d0.chunk.js.map": "/triviaApp/static/js/2.d9eb85d0.chunk.js.map",
+    "index.html": "/triviaApp/index.html",
+    "static/css/2.36e6f016.chunk.css.map": "/triviaApp/static/css/2.36e6f016.chunk.css.map",
+    "static/css/main.8da33de3.chunk.css.map": "/triviaApp/static/css/main.8da33de3.chunk.css.map",
+    "static/js/2.d9eb85d0.chunk.js.LICENSE.txt": "/triviaApp/static/js/2.d9eb85d0.chunk.js.LICENSE.txt",
+    "static/media/App.scss": "/triviaApp/static/media/background.41dbc550.png",
+    "static/media/correctAnswer.26f1d57d.svg": "/triviaApp/static/media/correctAnswer.26f1d57d.svg",
+    "static/media/earth.0ddf6d68.svg": "/triviaApp/static/media/earth.0ddf6d68.svg",
+    "static/media/ovni.1aafc528.svg": "/triviaApp/static/media/ovni.1aafc528.svg",
+    "static/media/triviaPerson.182b6171.svg": "/triviaApp/static/media/triviaPerson.182b6171.svg",
+    "static/media/winner.d76bfdf8.svg": "/triviaApp/static/media/winner.d76bfdf8.svg",
+    "static/media/wrongAnswer.ae055bf0.svg": "/triviaApp/static/media/wrongAnswer.ae055bf0.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.1ce031a2.js",
+    "static/js/runtime-main.b264da37.js",
     "static/css/2.36e6f016.chunk.css",
     "static/js/2.d9eb85d0.chunk.js",
-    "static/css/main.3488e832.chunk.css",
-    "static/js/main.a6a0e963.chunk.js"
+    "static/css/main.8da33de3.chunk.css",
+    "static/js/main.959591c8.chunk.js"
   ]
 }

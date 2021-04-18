@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import App from './App'
 import './i18n'
 import './scss/main.scss'
+import * as serviceWorker from './swRegister'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -10,3 +11,4 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 )
+serviceWorker.register()

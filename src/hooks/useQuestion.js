@@ -2,14 +2,20 @@ import { useContext, useEffect, useState } from 'react'
 import { useHistory } from 'react-router'
 import TriviaContext from '../context/context'
 
-const useCurrentQuestion = (id) => {
-  const { user } = useContext(TriviaContext)
+const useQuestion = (id) => {
   const history = useHistory()
+  const { user, setUser } = useContext(TriviaContext)
   const [state, setState] = useState({
     question: '',
-    loading: true,
-    isLast: false
+    isLoading: true
   })
+
+  const setClicked = () => {
+    setState({ ...state, isClicked: true })
+  }
+  const addPoint = () => {
+    setUser({ ...user, correct: user.correct + 1 })
+  }
 
   useEffect(() => {
     const questions = user.questions
@@ -19,13 +25,14 @@ const useCurrentQuestion = (id) => {
       const isLast = id === questions.length - 1
       setState({
         question: currentQuestion,
-        loading: false,
-        isLast: isLast
+        isLoading: false,
+        isLast: isLast,
+        isClicked: false
       })
     }
   }, [id])
 
-  return state
+  return { state, setClicked, addPoint }
 }
 
-export default useCurrentQuestion
+export default useQuestion

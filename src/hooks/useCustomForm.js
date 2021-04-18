@@ -13,7 +13,7 @@ const useCustomForm = () => {
   const startTrivia = async (e) => {
     console.log(e)
     const data = await getQuestions(e.amount, e.difficulty, e.type)
-    setUser({ ...user, questions: data, ...e })
+    setUser({ ...user, questions: data, ...e, correct: 0 })
     history.push(`/question/${1}`)
   }
   return { register, handleSubmit, startTrivia }

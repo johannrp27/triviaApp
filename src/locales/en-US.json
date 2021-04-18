@@ -30,5 +30,8 @@
     "name": "Results",
     "t1": "You got",
     "t2": "correct answers"
+  },
+  "error":{
+    "notInteger": "The number must be an integer"
   }
 }

@@ -2,7 +2,42 @@
 @import '../../node_modules/animate.css/animate.min.css';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
-body, html, #root {
+html, body, #root {
   height: 100%;
   font-family: 'Poppins', sans-serif;
+}
+body { 
+  background: url(../static/img/background.png) no-repeat center center fixed; 
+  background-size: cover;
+}
+.btn-primary.common{
+  background: #f9a827;
+  border-color: #f9a827;
+  color: white;
+  padding: 14px 25px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+.btn-primary.common:hover, .btn-primary.common:active, .btn-primary.common:focus {
+  background: #e49a24;
+  border-color: #e49a24;
+}
+.h4.title{
+  color: #2F527B;
+  font-weight: 600;
+}
+.card.data{
+  border-radius: 24px;
+}
+.h1.bold, .h2.bold{
+  color: #2F527B;
+  font-weight: bold;
+}
+.dynamic{
+  height: 100%;
+}
+@media screen and (max-height: 500px) {
+  .dynamic{
+    height: auto;
+  }
 }

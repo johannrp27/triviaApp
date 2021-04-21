@@ -3,3 +3,8 @@
   right: 0;
   bottom: -30px;
 }
+@media screen and (max-width: 425px) {
+  .trivia{
+    width: 120px;
+  }
+}

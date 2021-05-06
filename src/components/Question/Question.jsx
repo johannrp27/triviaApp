@@ -26,15 +26,16 @@ const Question = ({ match }) => {
             isClicked={isClicked}
             setClicked={setClicked}
             key={id}
-            id={id}
+            letter={id}
+            id={actualQuestionId}
             answer={answer}
             correctAnswer={question.correctAnswer}
-          />
-        ))}
+          />)
+        )}
       </div>
       <div className="mb-3 text-end">
         { isClicked &&
-          <Link to={ isLast ? '/results' : `/question/${actualQuestionId + 1}`}>
+          <Link to={ isLast ? '/results' : `/question/${actualQuestionId + 1}`} replace>
             <button type="button" className="btn btn-primary common shadow">
               { isLast
                 ? t('commons.end')
